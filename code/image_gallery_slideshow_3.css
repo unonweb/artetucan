@@ -1,0 +1,108 @@
+* {
+	box-sizing: border-box;
+}
+
+/* --- IMAGE SLIDES --- */
+
+#gallery {
+	margin-top: 0vh;
+	margin-bottom: 8vh;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+/* Hide the images by default */
+#slides-container {
+	display: block;
+	position: relative;
+}
+.slides {
+	display: none;
+	max-width: 50%;
+	margin: auto;
+  	width: 50%;
+	border: thin solid black;
+}
+.slides img {
+  vertical-align: bottom;
+}
+
+/* --- CONTROLS --- */
+
+.controls {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+    margin-left: 10%;
+	margin-right: 10%;
+	color: black;
+	font-weight: bold;
+	font-size: 3rem;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+#next {
+/* Position the "next button" to the right */
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.controls:hover {
+/* On hover, add a black background color with a little bit see-through */
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* --- COUNTER --- */
+
+.count {
+	color: grey;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+	background-color: white;
+  	border-radius: 50%;
+	border: thin solid black;
+}
+
+/* --- CAPTION --- */
+
+.caption-container {
+	background-color: var(--element-color);
+	padding: 0.4vw;
+	color: white;
+	border: thin solid black;
+	margin-top: -1px;
+}
+.caption-container p {
+	color: black;
+	margin: 0px;
+	text-align: center;
+}
+
+/* --- THUMBNAILS --- */
+
+#thumbnail-row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.thumbnail-column {
+/* Six columns side by side */
+	float: left;
+	width: 16.66%;
+}
+.cursor {
+/* Add a pointer when hovering over the thumbnail images */
+	cursor: pointer;
+}
+.thumbnail {
+/* Add a transparency effect for thumnbail images */
+	opacity: 0.6;
+}
+.active,
+.thumbnail:hover {
+/* Remove transparent effekt if state = either active or hovering */
+	opacity: 1;
+}

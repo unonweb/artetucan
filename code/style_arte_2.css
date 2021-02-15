@@ -1,0 +1,201 @@
+/*
+#background {
+    background-image: url(/img/cartel_1.jpg);
+    width: 100%;
+}
+.header-image {
+    width: 100%;
+}
+*/
+html {
+    font-size: 100%;
+    --line-height: 4vh;
+    --font-regular: 1vw;
+    --margin-regular: 3vw;
+    --background-color-1: whitesmoke;
+    --text-color: #93001C;
+    --element-color: #C7FF9C;
+}
+/* --- FONT BASICS --- */
+
+h1, h2, h3, h4, h5, nav {
+    font-family: sans-serif;
+}
+p, li {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* --- HEADLINE STYLES --- */
+
+h1 {
+    font-size: calc(var(--font-regular) + 1.4vw);
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 3vh;
+}
+h2 {
+    font-size: calc(var(--font-regular) + 0.4vw);
+    color: black;
+    text-transform: uppercase;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+}
+h3 {
+    font-size: var(--font-regular);
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: underline black solid;
+}
+h4 {
+    font-size: var(--font-regular);
+    font-weight: bold;
+}
+h5 {
+    font-size: var(--font-regular);
+    font-weight: normal;
+}
+/* --- Header -- */
+
+#background {
+    position: fixed;
+    z-index: -1;
+}
+#background img {
+    width: 100vw;
+}
+#placeholder {
+    /*
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    */
+    display: block;
+    padding-top: 50%;
+}
+
+/* --- NAV --- */
+
+nav {
+    position: sticky;
+    top: 0vh;
+    z-index: +1;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: center;
+    font-weight: bold;
+    font-size: calc(var(--font-regular) + 0.4vw);
+    color: var(--text-color);
+}
+#nav-main-container {
+    align-self: center;
+    display: flex;
+    direction: row;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#nav-right {
+    align-self: flex-end;
+}
+#nav-left {
+    align-self: flex-end;
+}
+.menu-item {
+    cursor: pointer;
+    padding: 0.8vw 2vw;
+    margin-left: 1vw;
+    border: thin solid black;
+    margin-bottom: -1px;
+    background-color: var(--background-color-1);
+}
+.menu-item:hover {
+    background-color: lightgrey;
+}
+
+/* --- DROP DOWN --- */
+
+.dropDownContainer {
+    position: relative;
+    display: inline-block;
+    min-width: 10vw;
+    cursor: pointer;
+}
+.dropDownContent {
+    display: none;
+    /*
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    */
+    position: absolute;
+    min-width: 10vw;
+    top: 100%;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+}
+.dropDownContent div {
+    display: block;
+    margin-bottom: -1px;
+    margin-left: -1px;
+}
+#nav-right div {
+    margin-right: -1px;
+}
+#nav-left div {
+    margin-right: 1px;
+}
+.show {
+    display:block;
+} 
+
+/* --- ETC --- */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+main {
+    background-color: var(--background-color-1);
+    border-top: thin solid black;
+}
+article {
+    padding-top: 0vh;
+    padding-bottom: 5vh;
+}
+.posts {
+    width: 50%;
+    margin: auto;
+}
+p {
+    line-height: var(--line-height);
+    text-align: justify;
+    font-size: var(--font-regular);
+}
+ul, ol {
+    line-height: var(--line-height);
+    font-size: var(--font-regular);
+}
+footer p {
+    margin-top: 0px;
+    border-top: thin solid black;
+    text-align: center;
+    background-color: var(--element-color);
+}
+
+/* --- PAGE UP/DOWN --- */
+#home {
+    position: fixed;
+    bottom: 4vh;
+    left: 4vh;
+    width: 2vw;
+    height: 4vh;
+}
+#up {
+    position: fixed;
+    bottom: 4vh;
+    right: 4vh;
+    width: 2vw;
+    height: 4vh;
+}

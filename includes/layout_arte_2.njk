@@ -1,0 +1,69 @@
+---
+title: Arte Tucán
+webspace: ""
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ webspace }}/code/style_arte_2.css">
+    <link rel="stylesheet" href="{{ webspace }}/code/image_gallery_slideshow_3.css">
+    <script src="{{ webspace }}/code/script_arte.js"></script>
+    <script src="{{ webspace }}/code/image_gallery_slideshow_4_xhr.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="background">
+            <img src="{{ webspace }}/img/cartel_1.jpg" id="cartel" class="header-image" alt="header image">
+        </div>
+        <div id="placeholder"></div>
+    </header>
+
+    <nav>
+        <div id="nav-left" class="dropDownContainer menu-item">Style
+            <div class="dropDownContent">
+                <div class="menu-item" id="style1">Style 1</div>
+                <div class="menu-item" id="style2">Style 2</div>
+                <div class="menu-item" id="style3">Style 3</div>
+                <div class="menu-item" id="style4">Style 4</div>
+            </div>
+        </div>
+        <div id="nav-main-container">
+            <div class="menu-item" id="nav-gallery">Gallery</div>
+            <div class="menu-item" id="nav-about-me">About me</div>
+            <div class="menu-item" id="nav-orders">Orders</div>
+        </div>
+        <div id="nav-right" class="dropDownContainer menu-item">Language
+            <div class="dropDownContent">
+                <div class="menu-item" id="en">English</div>
+                <div class="menu-item" id="sp">Spanish</div>
+            </div>
+        </div>
+
+    </nav>
+    
+    <main>
+
+        <article>
+            {{ content | safe }}   
+        </article>
+        
+    </main>
+
+    <footer>
+        <!--
+        <a href="#nav"><img src="{{ webspace }}/img/arrow_double_up.png" id='up'></a>
+        <a href="/"><img src="{{ webspace }}/img/home_1.png" id='home'></a>
+        -->
+        <p class="style1">Contact: Hesiquio Ruíz Mtz. | Tel: 958 584 32 55</p>
+        <div id="placeholder"></div>
+    </footer>
+
+</body>
+  
+</html>
